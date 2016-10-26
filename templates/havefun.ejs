@@ -1,0 +1,26 @@
+<%
+  opt={
+    css:[
+      '/css/waterfall.css',
+    ],
+  }
+%>
+<%- include('header')%>
+  <body>
+    <h1>this is havefun.ejs</h1>
+    <h2>瀑布流&爬虫</h2>
+    <div id="container">
+      <span class="column">
+        <% for(var i = 0;i < data.data.length;i++){ %>
+          <article class="panel">
+              <img src="<%= data.data[i] %>" />
+              <p>titile</p>
+          </article>
+        <% } %>
+      </span>
+    </div>
+    <script>
+
+    </script>
+  </body>
+</html>
