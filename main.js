@@ -78,6 +78,7 @@ app.use(function*routeAsync(next){
 	}
 
     if(path == '/') path = '/index';
+	console.log(path)
 	let actionFn = './action' + path + '.js';
 	if(!fs.existsSync(actionFn)) {
 		yield next;
@@ -137,5 +138,5 @@ app.use(function*routeAsync(next){
 		this.body = data;
 	}
 });
-app.listen(10010);
+app.listen(10000);
 log.logger.info('Listen on port: 10000');
