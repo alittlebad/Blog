@@ -107,11 +107,11 @@ app.use(function*routeAsync(next){
 				'msg': ret.msg
 			});
 		}
-		console.log('render');
+
 		if(ret instanceof this.U.TmplResult) {
 			let fn = './templates/' + ret.name + '.ejs';
 			fn = fn.toLocaleLowerCase();
-			console.log(fn)
+
 			if(!fs.existsSync(fn)){
 				this.throw(404);
 				return;
