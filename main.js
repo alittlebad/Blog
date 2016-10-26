@@ -110,7 +110,8 @@ app.use(function*routeAsync(next){
 		console.log('render');
 		if(ret instanceof this.U.TmplResult) {
 			let fn = './templates/' + ret.name + '.ejs';
-
+			fn = fn.toLocaleLowerCase();
+			console.log(fn)
 			if(!fs.existsSync(fn)){
 				this.throw(404);
 				return;
@@ -125,7 +126,6 @@ app.use(function*routeAsync(next){
 				{
 					'filename':fn
 				});
-				console.log(data);
 		}
 	}
 
