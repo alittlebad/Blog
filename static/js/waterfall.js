@@ -1,6 +1,3 @@
-var $ = function() {
-    return document.querySelectorAll.apply(document, arguments);
-}
 
     //#container .column
 var waterFall = (function() {
@@ -100,39 +97,43 @@ var waterFall = (function() {
     	}
     })();
 
-var tpl = {
-  temp(src) {
-    return `
-      <img src="http://cued.xunlei.com/demos/publ/img/P_00${src}" alt=""/>
-        <p>titile</p>
-      </article>
-    `;
-  }
-}
-var resize = (function(){
-    window.onresize = ()=>{resize();};
-    var flag;
-    return function(){
-        clearTimeout(flag);
-        flag = setTimeout(()=>{onload();},500);
-        return this;
+    var tpl = {
+        temp(src) {
+            return `
+            <img src="http://cued.xunlei.com/demos/publ/img/P_00${src}" alt=""/>
+                <p>titile</p>
+            </article>
+            `;
+        }
+    }
+    var resize = (function(){
+        window.onresize = ()=>{resize();};
+        var flag;
+        return function(){
+            clearTimeout(flag);
+            flag = setTimeout(()=>{onload();},500);
+            return this;
+        }
+    })();
+
+    var dataInt = [{
+        'src': '1.jpg'
+    }, {
+        'src': '2.jpg'
+    }, {
+        'src': '3.jpg'
+    }, {
+        'src': '4.jpg'
+    }];
+
+
+    return {
+        onload,
+        dealScroll,
+        resize
     }
 })();
-var dataInt = [{
-    'src': '1.jpg'
-}, {
-    'src': '2.jpg'
-}, {
-    'src': '3.jpg'
-}, {
-    'src': '4.jpg'
-}];
-return {
-    onload,
-    dealScroll,
-    resize
-}
-})();
+
 window.onload = function() {
     waterFall.onload();
 }

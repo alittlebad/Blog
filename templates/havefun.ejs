@@ -2,6 +2,7 @@
   opt={
     css:[
       '/css/waterfall.css',
+      '/css/havefun.css',
     ],
   }
 %>
@@ -13,7 +14,7 @@
       <span class="column">
         <% for(var i = 0;i < data.data.length;i++){ %>
           <article class="panel">
-              <img src="<%= data.data[i] %>" />
+              <img src="<%= data.data[i] %>" onclick="gallery(this)" />
               <p>titile</p>
           </article>
         <% } %>
