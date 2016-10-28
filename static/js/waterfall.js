@@ -93,7 +93,7 @@ var waterFall = (function() {
     		if(isLoad()){
     			for(var i = 0,html,data;data = dataInt[i++]; ){
     				html = tpl.temp(data.src); //获得数据然后添加模板
-    				createArticle(html);
+    				//createArticle(html);//不想无线循环
     			}
     		}
     		return this;
@@ -109,29 +109,29 @@ var tpl = {
     `;
   }
 }
-    var resize = (function(){
-    	window.onresize = ()=>{resize();};
-    	var flag;
-    	return function(){
-    		clearTimeout(flag);
-    		flag = setTimeout(()=>{onload();},500);
-    		return this;
-    	}
-    })();
-    var dataInt = [{
-        'src': '1.jpg'
-    }, {
-        'src': '2.jpg'
-    }, {
-        'src': '3.jpg'
-    }, {
-        'src': '4.jpg'
-    }];
-    return {
-        onload,
-        dealScroll,
-        resize
+var resize = (function(){
+    window.onresize = ()=>{resize();};
+    var flag;
+    return function(){
+        clearTimeout(flag);
+        flag = setTimeout(()=>{onload();},500);
+        return this;
     }
+})();
+var dataInt = [{
+    'src': '1.jpg'
+}, {
+    'src': '2.jpg'
+}, {
+    'src': '3.jpg'
+}, {
+    'src': '4.jpg'
+}];
+return {
+    onload,
+    dealScroll,
+    resize
+}
 })();
 window.onload = function() {
     waterFall.onload();
