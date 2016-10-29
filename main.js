@@ -138,5 +138,5 @@ app.use(function*routeAsync(next){
 		this.body = data;
 	}
 });
-app.listen(10000);
-log.logger.info('Listen on port: 10000');
+app.listen(80);
+log.logger.info('Listen on port: 80');
