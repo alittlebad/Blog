@@ -2,41 +2,12 @@
   <body>
     <h1>this is index.ejs</h1>
     <a href="/user">user</a>
+    <a href="/register">register</a>
     <br />
-    <a href="/havefun">havefun</a>
     <div id="reactInsert">
     </div>
   </body>
   <script>
 		ReactDOM.render(React.createElement(Index, null), document.getElementById('reactInsert'));
-    
-    let myHeaders = new Headers();
-    let init = {
-      method:'POST',
-      headers:myHeaders,
-      mode:'cors',
-      cache:'default',
-      body:JSON.stringify({'content':'sucess'})
-    }
-
-    $('h1').click(function(){
-      fetch('./api/test_post',init).then(function(res){
-        return res.json()
-      }).then(function(data){
-        console.log(data);
-      }).catch(function(e){
-        console.log('fetch error');
-      })
-    })
-    /*
-    $('h1').click(function(){
-      $.post('./api/test_post',{
-        'content':'post_success',
-      })
-      .success(function(data){
-        console.log(data);
-      })
-    })
-    */
   </script>
 </html>

@@ -4,5 +4,5 @@
 * register  个人信息注册页面
 
 #Notice
-1.用不用jquery待定，先凑合着用原生吧，锻炼自己。
-2.风格贴近bootstrap，但是不能用bs的库
++ 用不用jquery待定，先凑合着用原生吧，锻炼自己。
++ 风格贴近bootstrap，但是不能用bs的库
