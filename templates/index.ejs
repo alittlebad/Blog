@@ -7,11 +7,72 @@
 %>
 <%- include('header')%>
   <body>
+    <nav>
+      <div class="headerBody">
+        <span class="logo">快瞧</span>
+        <ul>
+          <li>
+            <a>主页</a>
+          </li>
+          <li>
+            <a>本站推荐</a>
+          </li>
+          <li>
+            <a>视频分类</a>
+          </li>
+          <li>
+            <a>热门搜索</a>
+          </li>
+          <li>
+            <a>*这些是示例*</a>
+          </li>
+        </ul>
+        <div class="navSearch">
+          <input placeholder="这里是搜索" />
+          <img src="/i/search_icon.png">
+        </div>
+        <div class="sign">
+          <a>
+            注册
+          </a>
+          <a>
+            登录
+          </a>
+        </div>
+        <div class="hasSignIn">
+
+        </div>
+      </div>
+    </nav>
     <h1>this is index.ejs</h1>
     <a href="/user">user</a>
     <br />
     <a href="/register">register</a>
     <br />
     <%- include('footer')%>
+    <script>
+      $('.navSearch input').focus(function(){
+        var that = $(this);
+        that.animate({'width':'150px'});
+        $('.navSearch').animate({'width':'200px','margin-left':'10px'});
+      })
+      $('.navSearch input').blur(function(){
+        var that = $(this);
+        that.animate({'width':'100px'});
+        $('.navSearch').animate({'width':'150px','margin-left':'60px'});
+      })
+
+      $('nav .headerBody .sign').click(function(){
+        var that = $(this);
+        that.hide();
+        $('nav .headerBody .hasSignIn').css('display','inline-block');
+      })
+
+      $('nav .headerBody .hasSignIn').click(function(){
+        var that = $(this);
+        that.hide();
+        $('nav .headerBody .sign').css('display','inline-block');
+      })
+    </script>
   </body>
 </html>
