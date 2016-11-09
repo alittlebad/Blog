@@ -3,11 +3,10 @@
   <head>
     <title><%= opt.title || '西街106号' %></title>
     <link rel="shortcut icon" href="/i/favicon.ico" >
-    <link rel='stylesheet' href='/css/style.css' />
+    <link rel='stylesheet' href='/css/component.css' />
     <%
       (opt.css || []).forEach(function(c) {
       %><link rel="stylesheet" href="<%= c %>" /><%
       });
     %>
-    <script src="/js/run.js"></script>
   </head>

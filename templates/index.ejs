@@ -1,3 +1,10 @@
+<%
+  opt={
+    css:[
+      '/css/index.css',
+    ],
+  }
+%>
 <%- include('header')%>
   <body>
     <h1>this is index.ejs</h1>
@@ -5,10 +12,6 @@
     <br />
     <a href="/register">register</a>
     <br />
-    <div id="reactInsert">
-    </div>
+    <%- include('footer')%>
   </body>
-  <script>
-		ReactDOM.render(React.createElement(Index, null), document.getElementById('reactInsert'));
-  </script>
 </html>
