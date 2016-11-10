@@ -31,11 +31,13 @@
       $('.navSearch input').focus(function(){
         var that = $(this);
         that.animate({'width':'150px'});
+        that.attr({placeholder:''});
         $('.navSearch').animate({'width':'200px','margin-left':'10px'});
       })
       $('.navSearch input').blur(function(){
         var that = $(this);
         that.animate({'width':'100px'});
+        that.attr({placeholder:'这个不在主页显示'});
         $('.navSearch').animate({'width':'150px','margin-left':'60px'});
       })
 
@@ -49,6 +51,14 @@
         var that = $(this);
         that.hide();
         $('nav .headerBody .sign').css('display','inline-block');
+      })
+      $('.level_1 .searchBox input').focus(function(){
+        var that = $(this);
+        that.attr({placeholder:''});
+      })
+      $('.level_1 .searchBox input').blur(function(){
+        var that = $(this);
+        that.attr({placeholder:'输入您想看的视频名字'});
       })
     </script>
   </body>

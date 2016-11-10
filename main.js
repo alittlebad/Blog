@@ -1,3 +1,4 @@
+'use strict';
 let koa = require('koa');
 let koaBody = require('koa-body');
 let staticCache = require('koa-static-cache');
