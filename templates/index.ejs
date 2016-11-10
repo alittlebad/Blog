@@ -18,18 +18,18 @@
             <a>本站推荐</a>
           </li>
           <li>
-            <a>视频分类</a>
+            <a></a>
           </li>
           <li>
-            <a>热门搜索</a>
+            <a></a>
           </li>
           <li>
-            <a>*这些是示例*</a>
+            <a></a>
           </li>
         </ul>
         <div class="navSearch">
-          <input placeholder="这里是搜索" />
-          <img src="/i/search_icon.png">
+          <input placeholder="这个不在主页显示" />
+          <img src="/i/search_icon.png" />
         </div>
         <div class="sign">
           <a>
@@ -40,15 +40,28 @@
           </a>
         </div>
         <div class="hasSignIn">
-
+          
         </div>
       </div>
     </nav>
-    <h1>this is index.ejs</h1>
-    <a href="/user">user</a>
-    <br />
-    <a href="/register">register</a>
-    <br />
+    <div style="position:absolute;left:0px;top:0px;color:white;">
+      <h1>this is index.ejs</h1>
+      <a href="/user">user</a>
+      <br />
+      <a href="/register">register</a>
+      <br />
+    </div>
+    <div class="level_1">
+      <div class="level1cnt">
+        <h1>最好用的视频信息聚合网站</h1>
+        <div class="searchBox">
+          <input placeholder="输入您想看的视频名字" />
+          <div class="go">
+          GO
+          </div>
+        </div>
+      </div>
+    </div>
     <%- include('footer')%>
     <script>
       $('.navSearch input').focus(function(){

@@ -100,3 +100,74 @@ nav .headerBody .hasSignIn{
     cursor: pointer;
     display: none;
 }
+
+.level_1{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    padding-top: 100px;
+    /*background-image: url('/i/bg1.png');*/
+}
+.level_1 .level1cnt{
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: inherit;
+    padding-top: 1px;
+}
+.level_1 .level1cnt h1{
+    text-align: center;
+    display: block;
+    width: 490px;
+    margin: 0 auto;
+    color: #8D91FF;
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: 100px;
+    background-color: white;
+}
+.level_1 .searchBox{
+    width: 490px;
+    height: 40px;
+    border-radius: 22px;
+    position: relative;
+    border: 1px solid #8D91FF;
+    vertical-align: top;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.level_1 .searchBox input{
+    display: inline-block;
+    vertical-align: top;
+    height: 38px;
+    border: 0px;
+    border-radius: 19px;
+    margin-top: 2px;
+    padding-left: 20px;
+    font-size: 22px;
+    outline: none;
+    font-family: 'Microsoft YaHei','Hiragino Sans GB',Arial,sans-serif;
+    font-weight: 200;
+}
+
+.level_1 .searchBox .go{
+    position: absolute;
+    vertical-align: top;
+    line-height: 40px;
+    background-color: #8D91FF;
+    color: white;
+    width: 100px;
+    right: -1px;
+    top: -1px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    font-size: 22px;
+    cursor: pointer;
+    border: 1px solid #8D91FF;
+}
+.level_1 .searchBox .go:hover{
+    background-color: white;
+    color:#8D91FF;
+}
