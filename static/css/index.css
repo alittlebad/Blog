@@ -40,6 +40,7 @@ body{
     vertical-align: top;
     margin: 0 auto;
     margin-top: 50px;
+    background-color: white;
 }
 
 .level_1 .searchBox input{
@@ -54,6 +55,7 @@ body{
     outline: none;
     font-family: 'Microsoft YaHei','Hiragino Sans GB',Arial,sans-serif;
     font-weight: 200;
+    width: 370px;
 }
 
 .level_1 .searchBox .go{
