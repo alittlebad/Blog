@@ -1,7 +1,26 @@
-<%- include('head')%>
-  <body>
-  <%- include('header')%>
-  
-  <%- include('footer')%>
-  </body>
+<link rel='stylesheet' href='/css/register.css'/>
+<%- include('head') %>
+<body>
+<%- include('header') %>
+<div class="register">
+    <div class="regTitle">注册</div>
+    <form class="regCenter">
+        <div class="regContent">
+            <input class="regId" placeholder="请输入昵称">
+        </div>
+        <div class="regContent">
+            <input class="regId" placeholder="请输入常用邮箱">
+        </div>
+        <div class="regContent">
+            <input class="veryCode" placeholder="验证码" type="text">
+        </div>
+        <label class="mar_l_340">
+            <input class="m-r-10" name="agree" id="agree" type="checkbox" value="1">
+            我已同意
+            <a target="_blank" href="/register/licence">《哔哩哔哩弹幕网用户使用协议》</a>和
+            <a target="_blank" href="http://www.bilibili.com/html/help.html#q">《哔哩哔哩弹幕网账号中心规范》</a></label>
+    </form>
+</div>
+<%- include('footer') %>
+</body>
 </html>
