@@ -5,60 +5,39 @@
     ],
   }
 %>
-<%- include('header')%>
+<%- include('head')%>
   <body>
-    <nav>
-      <div class="headerBody">
-        <span class="logo">快瞧</span>
-        <ul>
-          <li>
-            <a>主页</a>
-          </li>
-          <li>
-            <a>本站推荐</a>
-          </li>
-          <li>
-            <a>视频分类</a>
-          </li>
-          <li>
-            <a>热门搜索</a>
-          </li>
-          <li>
-            <a>*这些是示例*</a>
-          </li>
-        </ul>
-        <div class="navSearch">
-          <input placeholder="这里是搜索" />
-          <img src="/i/search_icon.png">
-        </div>
-        <div class="sign">
-          <a>
-            注册
-          </a>
-          <a>
-            登录
-          </a>
-        </div>
-        <div class="hasSignIn">
-
+    <%- include('header')%>
+    <div style="position:absolute;left:0px;top:0px;color:white;">
+      <h1>this is index.ejs</h1>
+      <a href="/user">user</a>
+      <br />
+      <a href="/register">register</a>
+      <br />
+    </div>
+    <div class="level_1">
+      <div class="level1cnt">
+        <h1>最好用的视频信息聚合网站</h1>
+        <div class="searchBox">
+          <input placeholder="输入您想看的视频名字" />
+          <div class="go">
+          GO
+          </div>
         </div>
       </div>
-    </nav>
-    <h1>this is index.ejs</h1>
-    <a href="/user">user</a>
-    <br />
-    <a href="/register">register</a>
-    <br />
+    </div>
     <%- include('footer')%>
     <script>
       $('.navSearch input').focus(function(){
         var that = $(this);
         that.animate({'width':'150px'});
+        that.attr({placeholder:''});
         $('.navSearch').animate({'width':'200px','margin-left':'10px'});
       })
       $('.navSearch input').blur(function(){
         var that = $(this);
         that.animate({'width':'100px'});
+        that.attr({placeholder:'这个不在主页显示'});
         $('.navSearch').animate({'width':'150px','margin-left':'60px'});
       })
 
@@ -72,6 +51,14 @@
         var that = $(this);
         that.hide();
         $('nav .headerBody .sign').css('display','inline-block');
+      })
+      $('.level_1 .searchBox input').focus(function(){
+        var that = $(this);
+        that.attr({placeholder:''});
+      })
+      $('.level_1 .searchBox input').blur(function(){
+        var that = $(this);
+        that.attr({placeholder:'输入您想看的视频名字'});
       })
     </script>
   </body>
