@@ -1,6 +1,7 @@
 .register {
     width: 980px;;
     margin: 0 auto;
+    padding-bottom: 35%;
 }
 
 .regTitle {
@@ -30,4 +31,34 @@
 
 .veryCode {
     padding: 10px;
+    margin-bottom: 25px;
+    margin-right: 20px;
+    position: relative;
 }
+.regSend{
+    width:100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+.errorTips{
+    width:70%;
+    color:red;
+    font-size: 14px;
+    margin:0 auto;
+    height: 20px;
+    line-height:20px;
+}
+.code_pic{
+    display: block;
+    width: 207px;
+    position: absolute;
+    left: 50%;
+    height: 35px;
+    line-height: 35px;
+    background-color: #34495e;
+    color: #FFF;
+    border-radius: 5px;
+    text-align: center;
+}
+
