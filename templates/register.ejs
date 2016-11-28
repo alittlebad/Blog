@@ -11,10 +11,10 @@
             <input class="regId" placeholder="请输入昵称">
         </div>
         <div class="regContent">
-            <input class="regId" placeholder="请输入常用邮箱">
+            <input onblur="validateEmail()" class="regId" placeholder="请输入常用邮箱">
         </div>
         <div class="regContent">
-            <input class="veryCode"
+            <input onfocus="changeImg()" class="veryCode"
                    placeholder="验证码" type="text">
             <span id="code" class="code_pic" onclick="changeImg()" title="看不清，换一张"></span>
             <p class="errorTips" id="errorTips"></p>

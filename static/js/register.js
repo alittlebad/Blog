@@ -23,6 +23,7 @@ function changeImg(){
 
 }
 
+
 // 验证验证码
 function check(){
     var error;
