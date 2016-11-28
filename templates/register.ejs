@@ -12,22 +12,28 @@
             </div>
             <div class="regContent">
                 <input onblur="validateEmail()" id="regEmail" class="regId" placeholder="请输入常用邮箱">
+                <p id="emailError"></p>
             </div>
-            <p class="errorTips" id="errorTips"></p>
             <div class="regContent">
-                <input onfocus="changeImg()" class="veryCode"
+                <input onfocus="changeImg()" onblur="validateCode()" class="veryCode" id="codeInput"
                        placeholder="验证码" type="text">
-                <span id="code" class="code_pic" onclick="changeImg()" title="看不清，换一张"></span>
+                <span id="code" class="code_pic"  onclick="changeImg()" title="看不清，换一张"></span>
+                <p id="codeError"></p>
             </div>
             <div class="regContent">
-                <input class="m-r-10" name="agree" id="agree" type="checkbox" value="1">
+                <input class="m-r-10" name="agree" id="agree" type="checkbox" onclick="isAgree()" value="1">
                 我已同意
                 <a target="_blank" href="/register/licence">《哔哩哔哩弹幕网用户使用协议》</a>和
                 <a target="_blank" href="http://www.bilibili.com/html/help.html#q">《哔哩哔哩弹幕网账号中心规范》</a>
             </div>
             <div class="regContent">
-                <input class="regSend" type="submit" id="emailSend" value="发送验证邮件">
+                <input class="regSend" type="submit" id="emailSend" ng-click="" value="发送验证邮件">
             </div>
+           <div style="width: 415px;margin: 0 auto;">
+               <a class="regLogin">已有账号,直接登陆</a>
+           </div>
+
+
         </form>
     </div>
     <%- include('footer') %>

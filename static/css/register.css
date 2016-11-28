@@ -41,18 +41,27 @@
     padding: 10px;
     margin-top: 10px;
 }
-.errorTips{
-    width:70%;
+#emailError{
+    position: absolute;
+    left:470px;
+    top:220px;
     color:red;
     font-size: 14px;
-    margin:0 auto;
+    height: 20px;
+    line-height:20px;
+}
+#codeError{
+    position: absolute;
+    left:470px;
+    top:280px;
+    color:red;
+    font-size: 14px;
     height: 20px;
     line-height:20px;
 }
 .code_pic{
     display: block;
     width: 207px;
-    position: absolute;
     left: 50%;
     height: 35px;
     line-height: 35px;
@@ -60,5 +69,10 @@
     color: #FFF;
     border-radius: 5px;
     text-align: center;
+}
+.regLogin{
+    float: right;
+    margin:10px 0;
+    color: #00a1d6;
 }
 
