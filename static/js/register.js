@@ -22,7 +22,14 @@ function changeImg(){
     document.getElementById('code').innerHTML = code;
 
 }
-
+function validateEmail(){
+    var mail=document.getElementById('regEmail').value;
+    console.log(mail)
+    var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (!filter.test(mail)) {
+        document.getElementById('errorTips').innerHTML = '请输入正确的邮箱格式';
+    }
+}
 
 // 验证验证码
 function check(){

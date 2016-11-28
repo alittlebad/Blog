@@ -3,33 +3,33 @@
 <script type="text/javascript" src="/js/register.js"></script>
 <%- include('head') %>
 <body>
-<%- include('header') %>
-<div class="register">
-    <div class="regTitle">注册</div>
-    <form class="regCenter">
-        <div class="regContent">
-            <input class="regId" placeholder="请输入昵称">
-        </div>
-        <div class="regContent">
-            <input onblur="validateEmail()" class="regId" placeholder="请输入常用邮箱">
-        </div>
-        <div class="regContent">
-            <input onfocus="changeImg()" class="veryCode"
-                   placeholder="验证码" type="text">
-            <span id="code" class="code_pic" onclick="changeImg()" title="看不清，换一张"></span>
+    <%- include('header') %>
+    <div class="register">
+        <div class="regTitle">注册</div>
+        <form class="regCenter">
+            <div class="regContent">
+                <input class="regId" placeholder="请输入昵称">
+            </div>
+            <div class="regContent">
+                <input onblur="validateEmail()" id="regEmail" class="regId" placeholder="请输入常用邮箱">
+            </div>
             <p class="errorTips" id="errorTips"></p>
-        </div>
-        <div class="regContent">
-            <input class="m-r-10" name="agree" id="agree" type="checkbox" value="1">
-            我已同意
-            <a target="_blank" href="/register/licence">《哔哩哔哩弹幕网用户使用协议》</a>和
-            <a target="_blank" href="http://www.bilibili.com/html/help.html#q">《哔哩哔哩弹幕网账号中心规范》</a>
-        </div>
-        <div class="regContent">
-            <input class="regSend" type="submit" id="emailSend" value="发送验证邮件">
-        </div>
-    </form>
-</div>
-<%- include('footer') %>
+            <div class="regContent">
+                <input onfocus="changeImg()" class="veryCode"
+                       placeholder="验证码" type="text">
+                <span id="code" class="code_pic" onclick="changeImg()" title="看不清，换一张"></span>
+            </div>
+            <div class="regContent">
+                <input class="m-r-10" name="agree" id="agree" type="checkbox" value="1">
+                我已同意
+                <a target="_blank" href="/register/licence">《哔哩哔哩弹幕网用户使用协议》</a>和
+                <a target="_blank" href="http://www.bilibili.com/html/help.html#q">《哔哩哔哩弹幕网账号中心规范》</a>
+            </div>
+            <div class="regContent">
+                <input class="regSend" type="submit" id="emailSend" value="发送验证邮件">
+            </div>
+        </form>
+    </div>
+    <%- include('footer') %>
 </body>
 </html>
