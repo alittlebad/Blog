@@ -1,6 +1,10 @@
-<link rel='stylesheet' href='/css/register.css'/>
-<script type="text/javascript" src="/js/jquery.js"></script>
-<script type="text/javascript" src="/js/register.js"></script>
+<%
+opt = {
+    css: [
+        '/css/register.css',
+    ],
+}
+%>
 <%- include('head') %>
 <body>
     <%- include('header') %>
@@ -8,17 +12,17 @@
         <div class="regTitle">注册</div>
         <form class="regCenter">
             <div class="regContent">
-                <input class="regId" placeholder="请输入昵称">
-            </div>
-            <div class="regContent">
                 <input onblur="validateEmail()" id="regEmail" class="regId" placeholder="请输入常用邮箱">
                 <p id="emailError"></p>
             </div>
             <div class="regContent">
+                <input id="regKey" class="regId" onblur="validateKey()" placeholder=" 请输入密码(6-16位字符组成，区分大小写）">
+                <p id="keyError"></p>
+            </div>
+            <div class="regContent">
                 <input onfocus="changeImg()" onblur="validateCode()" class="veryCode" id="codeInput"
                        placeholder="验证码" type="text">
-                <span id="code" class="code_pic"  onclick="changeImg()" title="看不清，换一张"></span>
-                <p id="codeError"></p>
+                <span id="code" class="code_pic" onclick="changeImg()" title="看不清，换一张"></span>
             </div>
             <div class="regContent">
                 <input class="m-r-10" name="agree" id="agree" type="checkbox" onclick="isAgree()" value="1">
@@ -29,13 +33,14 @@
             <div class="regContent">
                 <input class="regSend" type="submit" id="emailSend" ng-click="" value="发送验证邮件">
             </div>
-           <div style="width: 415px;margin: 0 auto;">
-               <a class="regLogin">已有账号,直接登陆</a>
-           </div>
+            <div style="width: 415px;margin: 0 auto;">
+                <a class="regLogin" href="/login">已有账号,直接登陆</a>
+            </div>
 
 
         </form>
     </div>
     <%- include('footer') %>
+    <script type="text/javascript" src="/js/register.js"></script>
 </body>
 </html>

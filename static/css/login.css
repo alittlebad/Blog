@@ -3,3 +3,72 @@
     margin: 0 auto;
     padding-bottom: 35%;
 }
+.loginTitle {
+     width: 100%;
+     height: 35px;
+     font-size: 25px;
+     text-align: center;
+     border-bottom: 2px solid #e6e6e6;
+ }
+.loginCenter {
+    padding: 20px;
+}
+
+.loginContent {
+    width: 415px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.loginId {
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #dfdfdf;
+}
+.forget{
+    float: right;
+    margin:10px 0;
+    color: #00a1d6;
+}
+.veryCode {
+    padding: 10px;
+    margin-bottom: 25px;
+    margin-right: 20px;
+    position: relative;
+}
+.code_pic{
+    display: block;
+    width: 207px;
+    left: 50%;
+    height: 35px;
+    line-height: 35px;
+    background-color: #34495e;
+    color: #FFF;
+    border-radius: 5px;
+    text-align: center;
+}
+.loginButton{
+    height: 38px;
+    border: 1px solid #0381AA;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #00A7DE;
+    margin-top: 10px;
+}
+.regButton{
+    color: #555;
+    display: inline-block;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin: 10px 0 0 27px;
+    text-decoration: none;
+}
+.loginButton ,.regButton{
+    width: 184px;
+    line-height: 38px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}

@@ -32,6 +32,16 @@ function validateEmail(){
         document.getElementById('emailError').innerHTML = '请输入正确的邮箱格式';
     }
 }
+//验证密码
+function validateKey() {
+    var key = document.getElementById('regKey').value;
+    var filter = /[a-z0-9]{6,16}/;
+    if (filter.test(key)) {
+        document.getElementById('keyError').innerHTML = '';
+    } else {
+        document.getElementById('keyError').innerHTML = '请输入6-16位字符';
+    }
+}
 
 // 验证验证码
 function validateCode(){
