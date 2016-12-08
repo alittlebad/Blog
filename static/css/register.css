@@ -31,7 +31,6 @@
 
 .veryCode {
     padding: 10px;
-    margin-bottom: 25px;
     margin-right: 20px;
     position: relative;
 }
@@ -46,24 +45,15 @@
     cursor: pointer;
     font-size: 14px;
 }
-#emailError{
-    position: absolute;
-    left:470px;
-    top:220px;
-    color:red;
-    font-size: 14px;
-    height: 20px;
-    line-height:20px;
-}
-#codeError{
-    position: absolute;
-    left:470px;
-    top:280px;
-    color:red;
-    font-size: 14px;
-    height: 20px;
-    line-height:20px;
-}
+#emailError,#keyError,#codeError{
+     float: right;
+     margin-top: -50px;
+     color:red;
+     font-size: 14px;
+     height: 20px;
+     line-height:20px;
+ }
+
 .code_pic{
     display: block;
     width: 207px;

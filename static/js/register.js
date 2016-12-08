@@ -35,7 +35,7 @@ function validateEmail(){
 //验证密码
 function validateKey() {
     var key = document.getElementById('regKey').value;
-    var filter = /[a-z0-9]{6,16}/;
+    var filter = /^[a-zA-Z\d]{6,16}$/;
     if (filter.test(key)) {
         document.getElementById('keyError').innerHTML = '';
     } else {
@@ -66,6 +66,8 @@ function isAgree(){
         $('#emailSend').attr('disabled',false);
     }
 }
+//发送邮件
+
 function addLoadEvent(func) {
     var oldonload = window.onload;
     if (typeof window.onload != 'function') {
